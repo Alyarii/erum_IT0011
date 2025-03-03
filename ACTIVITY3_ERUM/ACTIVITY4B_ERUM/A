@@ -1,0 +1,16 @@
+A = {'a', 'b', 'c', 'd', 'f', 'g'}
+B = {'b', 'c', 'd', 'f', 'h', 'l', 'm', 'o'}
+C = {'c', 'd', 'f', 'h', 'i', 'j', 'k'}
+
+A_union_B = A | B
+print("Elements in A ∪ B:", len(A_union_B))
+
+B_not_A_C = B - (A | C)
+print("Elements in B that are not in A or C:", len(B_not_A_C))
+
+print("Set 1 (h, i, j, k):", C - (A & B))
+print("Set 2 (c, d, f):", A & B & C)
+print("Set 3 (b, c, h):", {'b', 'c', 'h'})
+print("Set 4 (d, f):", A & B & C- {'c'})
+print("Set 5 (c):", "{c}")
+print("Set 6 (l, m, o):",B - (A | C) )
